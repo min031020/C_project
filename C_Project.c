@@ -221,9 +221,6 @@ int main() {
 
 	stdata.m = node1->data / 100; //BMI 계산의 편의성을 위해 m를 구함
 
-	BMI(stdata.m, node2->data, fp); //BMI계산 인자로 키와 몸무게 반환
-	printf("\n");
-
 	/* 메인 칼로리를 계산 하기 위해 성별, 키, 몸무게, 나이, 활동량을 인자로 반환
 	계산된 값을 mc에 저장 */
 	mc = MC(stdata.sex, node1->data, node2->data, undata.age, undata.act);
@@ -247,6 +244,9 @@ int main() {
 	default:
 		break;
 	}
+	
+	BMI(stdata.m, node2->data, fp); //BMI계산 인자로 키와 몸무게 반환
+	printf("\n");
 
 	//사용자가 먹은 칼로리를 계산하기 위해 sum 변수에 각 종류별로 먹은 음식을 더함
 	maincal = MainCal();
