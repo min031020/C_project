@@ -227,7 +227,7 @@ int main() {
 
 	/* 사용자가 목표를 입력
 	목표에 따라서 maincal를 다르게 설정 함 */
-	printf("<목표>\n유지 : 1\n컷팅 : 2\n벌킹 : 3\n > 입력 : ");
+	printf("\n<목표>\n유지 : 1\n컷팅 : 2\n벌킹 : 3\n > 입력 : ");
 	scanf("%d", &goal);
 	switch (goal) {
 	case 1: //목표가 유지일 경우 -> maincal 그대로
@@ -244,7 +244,7 @@ int main() {
 	default:
 		break;
 	}
-	
+
 	BMI(stdata.m, node2->data, fp); //BMI계산 인자로 키와 몸무게 반환
 	printf("\n");
 
